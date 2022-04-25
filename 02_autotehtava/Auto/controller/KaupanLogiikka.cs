@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.SqlClient;
+using Autokauppa.malli;
+using Auto;
 namespace Autokauppa.controller
 {
 
@@ -19,20 +21,20 @@ namespace Autokauppa.controller
             return doesItWork;
         }
 
-        public bool saveAuto(model.Auto newAuto) 
+        public bool saveAuto(malli.Auto newAuto) 
         {
             bool didItGoIntoDatabase = dbModel.saveAutoIntoDatabase(newAuto);
             return didItGoIntoDatabase;
         }
 
-        public List<> getAllAutoMakers() {
+        public List<AutonMerkki> GetAllAutoMakers() {
 
             return dbModel.getAllAutoMakersFromDatabase();
         }
 
-        public List<> getAutoModels(int makerId) {
+        public List<AutonMalli> GetAutoModels(int makerId) {
 
-            return dbModel.getAutoModelsByMakerId(makerId);
+            return dbModel.GetAutoModelsByMakerId(makerId);
         }
     }
 }

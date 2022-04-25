@@ -3,22 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
 
-namespace Autokauppa.malli
+namespace Auto
 {
-    public class Auto
+    class Class1
     {
-        private int ID;
-        private decimal Hinta;
-        private DateTime Rekisteri_paivamaara;
-        private decimal Moottorin_tilavuus;
-        private int MittariLukema;
-        private int AutonMerkkiID;
-        private int AutoMalliID;
-        private int VaritID;
-        private int PolttoaineID;
+       private int ID;
+       private decimal Hinta;
+       private DateTime Rekisteri_paivamaara;
+       private decimal Moottorin_tilavuus;
+       private int MittariLukema;
+       private int AutonMerkkiID;
+       private int AutoMalliID;
+       private int VaritID;
+       private int PolttoaineID;
 
         public int ID1 { get => ID; set => ID = value; }
         public decimal Hinta1 { get => Hinta; set => Hinta = value; }
@@ -29,15 +27,5 @@ namespace Autokauppa.malli
         public int AutoMalliID1 { get => AutoMalliID; set => AutoMalliID = value; }
         public int VaritID1 { get => VaritID; set => VaritID = value; }
         public int PolttoaineID1 { get => PolttoaineID; set => PolttoaineID = value; }
-    }
-
-    public static Auto Create(IDataRecord record)
-    {
-        return new Auto
-        (
-            (int)record["ID"],
-
-
-        )
     }
 }
