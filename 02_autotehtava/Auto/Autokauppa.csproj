@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Auto</RootNamespace>
     <AssemblyName>Auto</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -46,12 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\KaupanLogiikka.cs" />
     <Compile Include="model\AutonMalli.cs" />
     <Compile Include="model\AutonMerkki.cs" />
-    <Compile Include="controller\KaupanLogiikka.cs" />
     <Compile Include="model\DatabaseHallinta.cs" />
     <Compile Include="model\Auto.cs" />
-    <Compile Include="model\polttoaine.cs" />
+    <Compile Include="model\Haku.cs" />
+    <Compile Include="model\HakuKategoria.cs" />
+    <Compile Include="model\Polttoaine.cs" />
     <Compile Include="model\Varit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

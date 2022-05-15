@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
-namespace Auto.model
+namespace Autokauppa.model
 {
-    class Varit
+    public class Varit
     {
-        private int ID;
-        private string Varin_nimi;
+        private int _Id;
+        private string _Name;
 
-        public int ID1 { get => ID; set => ID = value; }
-        public string Varin_nimi1 { get => Varin_nimi; set => Varin_nimi = value; }
+        public int Id { get => _Id; set => _Id = value; }
+        public string Name { get => _Name; set => _Name = value; }
     }
 }

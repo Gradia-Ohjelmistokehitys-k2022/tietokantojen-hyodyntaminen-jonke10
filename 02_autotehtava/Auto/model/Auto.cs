@@ -3,41 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
 
-namespace Autokauppa.malli
+namespace Autokauppa.model
 {
     public class Auto
     {
-        private int ID;
-        private decimal Hinta;
-        private DateTime Rekisteri_paivamaara;
-        private decimal Moottorin_tilavuus;
-        private int MittariLukema;
-        private int AutonMerkkiID;
-        private int AutoMalliID;
-        private int VaritID;
-        private int PolttoaineID;
+        private int _Id;
+        private decimal _Price;
+        private DateTime _RegistryDate;
+        private decimal _EngineVolume;
+        private int _Meter;
+        private int _CarBrandId;
+        private int _CarModelId;
+        private int _ColorId;
+        private int _FuelTypeId;
+        public Auto(int Id, decimal Price, DateTime RegistryDate, decimal EngineVolume, int Meter, int CarBrandId, int CarModelId, int ColorId, int FuelTypeId)
+        {
+            _Id = Id;
+            _Price = Price;
+            _RegistryDate = RegistryDate;
+            _EngineVolume = EngineVolume;
+            _Meter = Meter;
+            _CarBrandId = CarBrandId;
+            _CarModelId = CarModelId;
+            _ColorId = ColorId;
+            _FuelTypeId = FuelTypeId;
+        }
+        public Auto()
+        {
 
-        public int ID1 { get => ID; set => ID = value; }
-        public decimal Hinta1 { get => Hinta; set => Hinta = value; }
-        public DateTime Rekisteri_paivamaara1 { get => Rekisteri_paivamaara; set => Rekisteri_paivamaara = value; }
-        public decimal Moottorin_tilavuus1 { get => Moottorin_tilavuus; set => Moottorin_tilavuus = value; }
-        public int MittariLukema1 { get => MittariLukema; set => MittariLukema = value; }
-        public int AutonMerkkiID1 { get => AutonMerkkiID; set => AutonMerkkiID = value; }
-        public int AutoMalliID1 { get => AutoMalliID; set => AutoMalliID = value; }
-        public int VaritID1 { get => VaritID; set => VaritID = value; }
-        public int PolttoaineID1 { get => PolttoaineID; set => PolttoaineID = value; }
-    }
-
-    public static Auto Create(IDataRecord record)
-    {
-        return new Auto
-        (
-            (int)record["ID"],
-
-
-        )
+        }
+        public int Id { get; set; }
+        public decimal Price { get; set; }
+        public DateTime RegistryDate { get; set; }
+        public decimal EngineVolume { get; set; }
+        public int Meter { get; set; }
+        public int CarBrandId { get; set; }
+        public int CarModelId { get; set; }
+        public int ColorId { get; set; }
+        public int FuelTypeId { get; set; }
     }
 }

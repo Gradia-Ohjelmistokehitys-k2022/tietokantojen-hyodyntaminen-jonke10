@@ -17,4 +17,3 @@ Vinkkejä:
 - olio pitää muistaa luoda ennen kuin sitä käytetään
   Esimerkiksi: Student student = new Student();
 
-  

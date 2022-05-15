@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
-namespace Auto.model
+namespace Autokauppa.model
 {
-   public class polttoaine
+    public class Polttoaine
     {
-        private int ID;
-        private string Polttoaineen_nimi;
+        private int _Id;
+        private string _Name;
 
-        public int ID1 { get => ID; set => ID = value; }
-        public string Polttoaineen_nimi1 { get => Polttoaineen_nimi; set => Polttoaineen_nimi = value; }
+        public int Id { get => _Id; set => _Id = value; }
+        public string Name { get => _Name; set => _Name = value; }
     }
 }

@@ -3,23 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
 
-namespace Auto
+namespace Autokauppa.model
 {
-   public class AutonMerkki
+    public class AutonMerkki
     {
-        private int ID;
-        private string Merkki;
+        private string _Merkki;
+        private int _Id;
 
-        public int ID1 { get => ID; set => ID = value; }
-        public string Merkki1 { get => Merkki; set => Merkki = value; }
-
-        internal static AutonMerkki Create(SqlDataReader rdr)
-        {
-            throw new NotImplementedException();
-        }
+       
+        public int Id { get => _Id; set => _Id = value; }
+        public string Merkki { get => _Merkki; set => _Merkki = value; }
     }
-
-    
 }
