@@ -351,7 +351,7 @@
             // 
             this.btnPoista.BackColor = System.Drawing.Color.Transparent;
             this.btnPoista.Location = new System.Drawing.Point(585, 170);
-            this.btnPoista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPoista.Margin = new System.Windows.Forms.Padding(4);
             this.btnPoista.Name = "btnPoista";
             this.btnPoista.Size = new System.Drawing.Size(93, 33);
             this.btnPoista.TabIndex = 33;
@@ -364,7 +364,7 @@
             this.btnTallenna.BackColor = System.Drawing.Color.Transparent;
             this.btnTallenna.Enabled = false;
             this.btnTallenna.Location = new System.Drawing.Point(585, 89);
-            this.btnTallenna.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTallenna.Margin = new System.Windows.Forms.Padding(4);
             this.btnTallenna.Name = "btnTallenna";
             this.btnTallenna.Size = new System.Drawing.Size(93, 33);
             this.btnTallenna.TabIndex = 31;
@@ -377,7 +377,7 @@
             this.btnPeruuta.BackColor = System.Drawing.Color.Transparent;
             this.btnPeruuta.Enabled = false;
             this.btnPeruuta.Location = new System.Drawing.Point(585, 129);
-            this.btnPeruuta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPeruuta.Margin = new System.Windows.Forms.Padding(4);
             this.btnPeruuta.Name = "btnPeruuta";
             this.btnPeruuta.Size = new System.Drawing.Size(93, 33);
             this.btnPeruuta.TabIndex = 32;
@@ -389,7 +389,7 @@
             // 
             this.CBKategoria.FormattingEnabled = true;
             this.CBKategoria.Location = new System.Drawing.Point(131, 230);
-            this.CBKategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CBKategoria.Margin = new System.Windows.Forms.Padding(4);
             this.CBKategoria.Name = "CBKategoria";
             this.CBKategoria.Size = new System.Drawing.Size(152, 24);
             this.CBKategoria.TabIndex = 37;
@@ -398,7 +398,7 @@
             // BtnHae
             // 
             this.BtnHae.Location = new System.Drawing.Point(585, 230);
-            this.BtnHae.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnHae.Margin = new System.Windows.Forms.Padding(4);
             this.BtnHae.Name = "BtnHae";
             this.BtnHae.Size = new System.Drawing.Size(93, 33);
             this.BtnHae.TabIndex = 38;
@@ -410,9 +410,9 @@
             // 
             this.GBHaku.Controls.Add(this.dataGrid);
             this.GBHaku.Location = new System.Drawing.Point(12, 271);
-            this.GBHaku.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GBHaku.Margin = new System.Windows.Forms.Padding(4);
             this.GBHaku.Name = "GBHaku";
-            this.GBHaku.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GBHaku.Padding = new System.Windows.Forms.Padding(4);
             this.GBHaku.Size = new System.Drawing.Size(667, 364);
             this.GBHaku.TabIndex = 39;
             this.GBHaku.TabStop = false;
@@ -421,7 +421,7 @@
             // 
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Location = new System.Drawing.Point(5, 25);
-            this.dataGrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGrid.Margin = new System.Windows.Forms.Padding(4);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(653, 332);
             this.dataGrid.TabIndex = 0;
@@ -430,7 +430,7 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(295, 230);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(285, 26);
             this.flowLayoutPanel1.TabIndex = 40;
@@ -477,9 +477,10 @@
             this.Controls.Add(this.btnSeuraava);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
             this.Text = "MainMenu";
+            this.Load += new System.EventHandler(this.MainMenu_Load);
             this.gbAuto.ResumeLayout(false);
             this.gbAuto.PerformLayout();
             this.menuStrip1.ResumeLayout(false);

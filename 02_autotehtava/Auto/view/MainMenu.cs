@@ -407,5 +407,10 @@ namespace Autokauppa.view
             dataGrid.DataSource = registerHandler.UserSearch(haku);
             autontiedot(registerHandler.GetNewestCar());
         }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+            registerHandler.TestDatabaseConnection();
+        }
     }
 }

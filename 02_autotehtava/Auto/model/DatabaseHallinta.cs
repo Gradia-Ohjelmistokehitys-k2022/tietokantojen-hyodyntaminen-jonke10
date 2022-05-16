@@ -14,25 +14,27 @@ namespace Autokauppa.model
 
     public DatabaseHallinta()
     {
-        dbYhteys = new SqlConnection();
-        yhteysTiedot = @"Server = C:\Users\joona\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\MSSQLLocalDB\autokauppa.mdf";
-        dbYhteys.ConnectionString = yhteysTiedot;
-    }
+            yhteysTiedot = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=autokauppa;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            dbYhteys = new SqlConnection(yhteysTiedot);
+            connectDatabase();
+        }
 
-    public bool connectDatabase()
+        public bool connectDatabase()
     {
-        try
-        {
-            dbYhteys.Open();
+            try
+            {
+                if (dbYhteys.State == ConnectionState.Open)
+                    return true;
+                dbYhteys.Open();
 
-            return true;
-        }
-        catch (Exception e)
-        {
-            dbYhteys.Close();
-            Console.WriteLine("Virheilmoitukset:" + e);
-            return false;
-        }
+                return true;
+            }
+            catch (Exception e)
+            {
+                dbYhteys.Close();
+                Console.WriteLine("Virheilmoitukset:" + e);
+                return false;
+            }
 
     }
 

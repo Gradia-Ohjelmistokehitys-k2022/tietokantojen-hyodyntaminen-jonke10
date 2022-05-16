@@ -13,6 +13,7 @@ namespace Autokauppa
         {
             MainMenu MainWindow = new MainMenu();
             MainWindow.ShowDialog();
+
         }
     }
 }
